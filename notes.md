@@ -5,8 +5,8 @@
 3. Test with input file
 
    - Check for errors: `antlr4-test X input.txt`
-   - Get syntax tokens: `antlr4-test X r -tokens input.txt`
-   - Get AST: `antlr4-tree X input.txt`
+   - Get syntax tokens: `antlr4-test X -tokens < input.txt`
+   - Get GUI: `antlr4-test -gui < input.txt`
 
 4. Create visitor(s) (`antlr4-visitor X ClassName OutputType`) or listener(s) (`antl4-listener X ClassName`)
 5. Implement visitor(s) (ClassName.java)
