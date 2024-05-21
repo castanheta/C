@@ -11,7 +11,11 @@ stmt: questionDef ';'
     | typeDecl ';'
     ;
 
-questionDef: questionType questionID 'is' statementBlock 'end';
+questionDef: holeDef | openDef;
+
+holeDef: 'hole' questionID 'is' holeStatementBlock 'end';
+
+openDef: questionType questionID 'is' statementBlock 'end';
 
 questionID: questionID '.' questionID #subtype
             | ID                      #IDtype
@@ -31,24 +35,23 @@ var: ID;
 
 // Lexer rules
 
-questionType: 'hole' | 'open' | 'code-hole' | 'code-open' | 'code-output' | 'multi-choice';
+questionType: 'open' | 'code-hole' | 'code-open' | 'code-output' | 'multi-choice';
 
 type: 'question' | 'fraction';
+
+holeStatementBlock: 'println' STRING ' ans->' STRING anwser;
     
-statementBlock: (statement)+;
+statementBlock: singleStatement | (multipleStatement)+;
 
-statement: hole_printlnStatement
-         | open_printlnStatement
-         | usesStatement
-         ;
+singleStatement: open_printlnStatement;
 
-hole_printlnStatement: 'println' STRING 'ans->' STRING anwser;
+multipleStatement: (open_printlnStatement ';' |  usesStatement ';');
 
-open_printlnStatement: 'println' STRING';';
+open_printlnStatement: 'println' STRING;
+
+usesStatement: 'uses' 'code' 'from' STRING 'end';
 
 anwser: STRING;
-
-usesStatement: 'uses' 'code' 'from' STRING 'end'';';
 
 // Tokens
 

@@ -52,6 +52,30 @@ public class qlangerBaseListener implements qlangerListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterHoleDef(qlangerParser.HoleDefContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitHoleDef(qlangerParser.HoleDefContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterOpenDef(qlangerParser.OpenDefContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitOpenDef(qlangerParser.OpenDefContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterIDtype(qlangerParser.IDtypeContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -160,6 +184,18 @@ public class qlangerBaseListener implements qlangerListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterHoleStatementBlock(qlangerParser.HoleStatementBlockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitHoleStatementBlock(qlangerParser.HoleStatementBlockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterStatementBlock(qlangerParser.StatementBlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -172,25 +208,25 @@ public class qlangerBaseListener implements qlangerListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStatement(qlangerParser.StatementContext ctx) { }
+	@Override public void enterSingleStatement(qlangerParser.SingleStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStatement(qlangerParser.StatementContext ctx) { }
+	@Override public void exitSingleStatement(qlangerParser.SingleStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterHole_printlnStatement(qlangerParser.Hole_printlnStatementContext ctx) { }
+	@Override public void enterMultipleStatement(qlangerParser.MultipleStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitHole_printlnStatement(qlangerParser.Hole_printlnStatementContext ctx) { }
+	@Override public void exitMultipleStatement(qlangerParser.MultipleStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -208,18 +244,6 @@ public class qlangerBaseListener implements qlangerListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAnwser(qlangerParser.AnwserContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitAnwser(qlangerParser.AnwserContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterUsesStatement(qlangerParser.UsesStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -227,6 +251,18 @@ public class qlangerBaseListener implements qlangerListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitUsesStatement(qlangerParser.UsesStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAnwser(qlangerParser.AnwserContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAnwser(qlangerParser.AnwserContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

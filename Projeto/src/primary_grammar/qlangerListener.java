@@ -37,6 +37,26 @@ public interface qlangerListener extends ParseTreeListener {
 	 */
 	void exitQuestionDef(qlangerParser.QuestionDefContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link qlangerParser#holeDef}.
+	 * @param ctx the parse tree
+	 */
+	void enterHoleDef(qlangerParser.HoleDefContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link qlangerParser#holeDef}.
+	 * @param ctx the parse tree
+	 */
+	void exitHoleDef(qlangerParser.HoleDefContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link qlangerParser#openDef}.
+	 * @param ctx the parse tree
+	 */
+	void enterOpenDef(qlangerParser.OpenDefContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link qlangerParser#openDef}.
+	 * @param ctx the parse tree
+	 */
+	void exitOpenDef(qlangerParser.OpenDefContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code IDtype}
 	 * labeled alternative in {@link qlangerParser#questionID}.
 	 * @param ctx the parse tree
@@ -131,6 +151,16 @@ public interface qlangerListener extends ParseTreeListener {
 	 */
 	void exitType(qlangerParser.TypeContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link qlangerParser#holeStatementBlock}.
+	 * @param ctx the parse tree
+	 */
+	void enterHoleStatementBlock(qlangerParser.HoleStatementBlockContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link qlangerParser#holeStatementBlock}.
+	 * @param ctx the parse tree
+	 */
+	void exitHoleStatementBlock(qlangerParser.HoleStatementBlockContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link qlangerParser#statementBlock}.
 	 * @param ctx the parse tree
 	 */
@@ -141,25 +171,25 @@ public interface qlangerListener extends ParseTreeListener {
 	 */
 	void exitStatementBlock(qlangerParser.StatementBlockContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link qlangerParser#statement}.
+	 * Enter a parse tree produced by {@link qlangerParser#singleStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterStatement(qlangerParser.StatementContext ctx);
+	void enterSingleStatement(qlangerParser.SingleStatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link qlangerParser#statement}.
+	 * Exit a parse tree produced by {@link qlangerParser#singleStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitStatement(qlangerParser.StatementContext ctx);
+	void exitSingleStatement(qlangerParser.SingleStatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link qlangerParser#hole_printlnStatement}.
+	 * Enter a parse tree produced by {@link qlangerParser#multipleStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterHole_printlnStatement(qlangerParser.Hole_printlnStatementContext ctx);
+	void enterMultipleStatement(qlangerParser.MultipleStatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link qlangerParser#hole_printlnStatement}.
+	 * Exit a parse tree produced by {@link qlangerParser#multipleStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitHole_printlnStatement(qlangerParser.Hole_printlnStatementContext ctx);
+	void exitMultipleStatement(qlangerParser.MultipleStatementContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link qlangerParser#open_printlnStatement}.
 	 * @param ctx the parse tree
@@ -171,16 +201,6 @@ public interface qlangerListener extends ParseTreeListener {
 	 */
 	void exitOpen_printlnStatement(qlangerParser.Open_printlnStatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link qlangerParser#anwser}.
-	 * @param ctx the parse tree
-	 */
-	void enterAnwser(qlangerParser.AnwserContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link qlangerParser#anwser}.
-	 * @param ctx the parse tree
-	 */
-	void exitAnwser(qlangerParser.AnwserContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link qlangerParser#usesStatement}.
 	 * @param ctx the parse tree
 	 */
@@ -190,4 +210,14 @@ public interface qlangerListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitUsesStatement(qlangerParser.UsesStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link qlangerParser#anwser}.
+	 * @param ctx the parse tree
+	 */
+	void enterAnwser(qlangerParser.AnwserContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link qlangerParser#anwser}.
+	 * @param ctx the parse tree
+	 */
+	void exitAnwser(qlangerParser.AnwserContext ctx);
 }
