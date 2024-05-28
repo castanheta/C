@@ -1,0 +1,8 @@
+group CodeOpenQuestion;
+
+codeOpenQuestion(questionText, code) ::= <<
+q = new CodeOpenQuestion("<questionText>", "<code>");
+g = q.execute();
+result.updateGrade(g);
+>>
+

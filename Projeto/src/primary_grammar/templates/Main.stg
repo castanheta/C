@@ -1,0 +1,21 @@
+group Main;
+
+import "HoleQuestion.stg"
+import "OpenQuestion.stg"
+import "CodeOpenQuestion.stg"
+
+mainClass(outputFile, questions) ::= <<
+public class Main {
+    private static Result result = new Result();
+
+    public static void main(String[] args) {
+        AbstractQuestion q;
+        Fraction g;
+
+        <questions; separator="\n">
+
+        result.exportToFile("<outputFile>");
+    }
+}
+>>
+
