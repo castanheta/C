@@ -1,3 +1,4 @@
+Adapted from Pedro Ferreira for 99% of the population
 # Step-by-step antlr compiler guide
 
 1. Create grammar (.g4) - `antlr4 X.g4`
